@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Abhi Diaries 📸</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>The Abhi Diaries 📸</h1>
+      <button id="darkToggle">🌓</button>
+    </div>
+  </header>
+
+  <main class="cards-section container" id="cardContainer">
+    <!-- Cards will be dynamically generated here -->
+  </main>
+
+  <section class="upload-section container">
+    <h2>Add New Photo Diary</h2>
+    <form id="uploadForm">
+      <input type="file" id="imageInput" accept="image/*" required />
+      <input type="text" id="nameInput" placeholder="Name" required />
+      <input type="text" id="descInput" placeholder="Description" required />
+      <input type="text" id="titleInput" placeholder="Back Title" required />
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <!-- Fullscreen Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="audio/who-rules-the-world.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+  <button id="musicToggle">🔊 Play Music</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
